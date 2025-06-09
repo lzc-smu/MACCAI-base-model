@@ -3,7 +3,7 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import torch
 import torch.utils.data
 from lib.opts import opts
@@ -16,9 +16,15 @@ from lib.trainer import Trainer
 from lib.dataset.task2 import Dataset2
 
 
+import numpy as np
+
 def main(opt):
   torch.manual_seed(opt.seed)
-  torch.backends.cudnn.benchmark = not opt.not_cuda_benchmark and not opt.test
+  np.random.seed(opt.seed)
+  if opt.gpus[0] >= 0:
+    torch.cuda.manual_seed_all(opt.seed)
+  torch.backends.cudnn.deterministic = True
+  torch.backends.cudnn.benchmark = False
   opt = opts().update_dataset_info_and_set_heads(opt, Dataset2)
   print(opt)
   opt.device = torch.device('cuda' if opt.gpus[0] >= 0 else 'cpu')
