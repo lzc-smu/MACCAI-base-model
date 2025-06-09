@@ -139,28 +139,6 @@ python test.py --demo <path_to_test_data_or_JPEGImages> --load_model <path_to_yo
 *   `<path_to_your_trained_model>`: Specify the path to the pre-trained model weights.
 *   The results (e.g., output images, segmentation masks) will be saved in a directory (e.g., `exp/results/imgs/` by default, or as specified by options).
 
-## Evaluation
-
-[Please describe how to evaluate the inference results to obtain the metrics reported in your paper. If you have an evaluation script, provide the command to run it.]
-
-Example of running an evaluation script (if applicable):
-
-```bash
-# python eval.py --seg_data <path_to_inference_results> --gt_data <path_to_ground_truth>
-```
-
-## Results
-
-[Please include a table or a summary of the main results from your paper. You can link to a leaderboard if applicable, or include key figures.]
-
-Example Table:
-
-| Metric       | Value  |
-| ------------ | :----: |
-| DICE Score   |  XX.X% |
-| IoU          |  YY.Y% |
-| ...          |  ...   |
-
 ## Acknowledgement
 
 Our work benefits a lot from [CenterTrack](https://github.com/xingyizhou/CenterTrack#tracking-objects-as-points) and [DeepSnake](https://github.com/zju3dv/snake). Thanks for their great contributions.
