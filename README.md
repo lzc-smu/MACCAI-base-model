@@ -1,6 +1,6 @@
 # CylinGCN: Cylindrical Structures Segmentation in 3D Biomedical Optical Imaging by a contour-based Graph Convolutional Network
 
-![city](assets/SFEGCN.bmp)
+![city](assets/SFEGCN.jpg)
 
 > [**Organ-level instance segmentation enables continuous time-space-spectrum analysis of photoacoustic tomography images**](https://www.sciencedirect.com/science/article/abs/pii/S136184152400327X/)  
 > Zhichao Liang, Shuangyang Zhang, Zongxin Mo, Xiaoming Zhang, Anqi Wei, Wufan Chen, Li Qi
